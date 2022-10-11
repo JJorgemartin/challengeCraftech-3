@@ -16,7 +16,7 @@ jobs:
           command: "docker build -t jjorgemartin/challengecraftech-3:$CIRCLE_SHA1 ."
       - run:
           name: "Push"
-          command: "docker push jjorgemartin/challengecraftech-3:$CIRCLE_SHA1"
+          command: "docker push seniorjj/challenge:$CIRCLE_SHA1"
 
 
 workflows:
