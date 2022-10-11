@@ -5,6 +5,8 @@ jobs:
     docker:
       - image: seniorjj/challenge:1.0
     steps:
+      - setup_remote_docker:
+        version: 20.10.14
       - checkout
       - run:
           name: "login"
