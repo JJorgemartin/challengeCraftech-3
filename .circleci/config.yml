@@ -1,0 +1,25 @@
+version: 2.1
+
+jobs:
+  craftech:
+    docker:
+      - image: seniorjj/challenge:1.0
+    steps:
+      - setup_remote_docker:
+          version: 20.10.14
+      - checkout
+      - run:
+          name: "login"
+          command: "docker login -u $DOCKER_USER -p $DOCKER_PASS"
+      - run:
+          name: "Build"
+          command: "docker build -t seniorjj/challenge:$CIRCLE_BRANCH ."
+      - run:
+          name: "Push"
+          command: "docker push seniorjj/challenge:$CIRCLE_BRANCH"
+
+
+workflows:
+  craftech-workflow:
+    jobs:
+      - craftech
