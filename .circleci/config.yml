@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   craftech:
     docker:
-      - image: nginx:1.14.2-alpine
+      - image: nginx:1.23.1-alpine
     steps:
       - checkout
       - run:
