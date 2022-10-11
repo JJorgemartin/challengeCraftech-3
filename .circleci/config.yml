@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   craftech:
     docker:
-      - image: seniorjj/challenge
+      - image: seniorjj/challenge:1.0
     steps:
       - checkout
       - run:
