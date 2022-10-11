@@ -1,3 +1,3 @@
-FROM nginx:1.23.1-alpine
+FROM seniorjj/challenge
 
 COPY index.html /usr/share/nginx/html/
